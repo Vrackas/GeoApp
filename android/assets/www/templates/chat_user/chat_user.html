@@ -1,0 +1,117 @@
+<ion-view view-title="Chat_user" class="chatUserPage" hide-nav-bar="true">
+
+    <!--<ion-header-bar>-->
+        <!--<ion-nav-bar class="back">-->
+            <!--<ion-nav-buttons side="left">-->
+                <!--<button class=" button-exit button" ui-sref="tabs.chat">-->
+                    <!--<i class="ion-arrow-left-c"></i>-->
+                    <!--&nbsp; {{"gtnz"}}{{vm.senderName}}-->
+                <!--</button>-->
+            <!--</ion-nav-buttons>-->
+        <!--</ion-nav-bar>-->
+    <!--</ion-header-bar>-->
+    <div class="bar bar-header bar-calm">
+        <button ng-click="$ionicGoBack()" class="back-button button-icon icon"><i class="icon ion-chevron-left"></i></button>
+        <!--<button ui-sref="menu_operator" class="back-button button-icon icon" ng-show="$root.role == 4"><i class="icon ion-chevron-left"></i></button>-->
+        <h1 class="title">{{vm.senderName}}</h1>
+        <a class="button button-calm" href="tel:{{vm.numberPhone}}">
+            <!--<i class="icon ion-android-call"></i>-->
+            <i class="icon ion-ios-telephone-outline"></i>
+        </a>
+    </div>
+
+    <ion-content>
+        <div>
+            <div class="speech" ng-class="{'my-message': message.user_id ===  vm.my_id}" md-whiteframe="6"
+                 ng-repeat="message in vm.messageRes track by $index">
+                <div class="message-content ">
+                    <div class="message-creator">
+                        <h6>{{message.user_name}}</h6>
+
+                    </div>
+                    <div class="message-text"></div>
+                </div>
+                <p>{{message.message}}</p>
+                <p am-time-ago="message.time"></p>
+            </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar>
+        <div class="new-message" flex="100" layout="row" layout-align="space-between">
+            <!--<ion-input ng-model="vm.message.text" type="text" placeholder="Ваше повідомлення..."></ion-input>-->
+            <textarea flex="90" ng-model="vm.message.text" placeholder="Ваше повідомлення..."></textarea>
+            <!--<ion-label color="primary"><button ng-click="vm.sendMessage()" class="button button-icon icon ion-android-send"></ion-label>-->
+            <button flex="10" ng-click="vm.sendMessage()" class="button button-icon icon ion-android-send">
+            </button>
+        </div>
+    </ion-footer-bar>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--<ion-nav-bar>-->
+        <!--<ion-nav-back-button>Back</ion-nav-back-button>-->
+        <!--<div class="bar bar-header bar-balanced">-->
+        <!--<button class="button button-icon icon" ui-sref="couriers_list"><i class="icon ion-arrow-left-a"></i></button>-->
+        <!--&lt;!&ndash;<h1 class="title">{{vm.collocutor.name}}</h1>&ndash;&gt;-->
+    <!--</div>-->
+    <!--</ion-nav-bar>-->
+
+    <!--<ion-content class="has-header">-->
+        <!--&lt;!&ndash;<ion-nav-bar>&ndash;&gt;-->
+            <!--&lt;!&ndash;<ion-nav-back-button>Back</ion-nav-back-button>&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="bar bar-header bar-balanced">&ndash;&gt;-->
+                <!--&lt;!&ndash;<button class="button button-icon icon" ui-sref="couriers_list"><i class="icon ion-arrow-left-a"></i></button>&ndash;&gt;-->
+                <!--&lt;!&ndash;<h1 class="title">{{vm.collocutor.name}}</h1>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</ion-nav-bar>&ndash;&gt;-->
+        <!--<ol class="messages">-->
+            <!--<div ng-repeat="message in vm.messages">-->
+                <!--<div class="{{'message ' + vm.getMessageHeaderClass(message)}}">-->
+                    <!--<p>{{message.text}}</p>-->
+                    <!--<p class="time">00:00</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</ol>-->
+
+        <!--&lt;!&ndash; <div class="list">-->
+            <!--<label class="item item-input item-stacked-label" ng-repeat="message in vm.messages ">-->
+                <!--<h4 class="{{vm.getMessageHeaderClass(message)}}">{{(message.sender == 0) ? "You" : vm.collocutor.name}}</h4>-->
+                <!--<h3 style="white-space: pre-wrap;">{{message.text}}</h3>-->
+            <!--</label>-->
+        <!--</div> &ndash;&gt;-->
+
+    <!--</ion-content>-->
+
+    <!--&lt;!&ndash; <div class="message-area">-->
+        <!--<textarea class="" ng-model="newMessage" />-->
+        <!--<i class="icon ion-paper-airplane send-button" ng-click="vm.send(newMessage)"></i>-->
+    <!--</div> &ndash;&gt;-->
+
+    <!--<ion-footer-bar keyboard-attach class="bar-stable item-input-inset">-->
+      <!--<label class="item-input-wrapper">-->
+        <!--<input type="text" placeholder="Type your message" ng-model="newMessage" />-->
+      <!--</label>-->
+      <!--<button class="button button-clear" ng-click="vm.send(newMessage); newMessage = ''">-->
+        <!--<i class="icon ion-paper-airplane send-button"></i>-->
+      <!--</button>-->
+    <!--</ion-footer-bar>-->
+</ion-view>

@@ -1,0 +1,22 @@
+<ion-view class="workerListPage" view-title="workers_list" hide-nav-bar="true">
+
+    <!--<div class="bar bar-header bar-stable">-->
+    <!--<button ng-click="$ionicGoBack()" class="back-button button-icon icon"><i class="icon ion-chevron-left"></i></button>-->
+    <!--<h1 class="title">Couriers</h1>-->
+    <!--</div>-->
+
+    <ion-content class="has-header">
+
+        <ion-list class="list">
+            <ion-item class="item item-button-right" ng-repeat="worker in vm.list">
+
+                <h2 ng-click="vm.SendProfileId(worker)">{{worker.username}}</h2>
+                <button class=" button button-icon icon iconChat" ng-click="vm.SendId(worker)"><i class="icon ion-chatbox"></i></button>
+                <button class=" button button-icon icon iconLocation" ng-click="vm.chooseUser(worker)"><i class="icon ion-location"></i></button>
+            </ion-item>
+
+        </ion-list>
+
+    </ion-content>
+    <!--<div class="bar bar-footer bar-stable"><i class="icon ion-plus icon-footer-add" ui-sref="courier_list_add"></i><i class="icon ion-minus icon-footer-add" ui-sref="courier_list_delete"></i></div>-->
+</ion-view>

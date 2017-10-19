@@ -1,0 +1,15 @@
+/* Empty. Add your own CSS if you like */
+
+ion-view.registerPage,
+ion-view.passwordRecoveryPage,
+ion-view.menuCourierPage,
+ion-view.menuOperatorPage,
+ion-view.geolocationPage {
+    background: #92908f;
+}
+ion-view.loginPage{
+    /*background: rgb(17, 193, 243);*/
+    background: #FFFFFF;
+}
+
+

@@ -1,0 +1,26 @@
+ion-view.profilePage {
+  .username {
+    margin-top: 35%;
+    h1{
+      text-align: center;
+    }
+
+  }
+  .information-list{
+    margin-top: 33%;
+  }
+  .information-list {
+    div{
+      margin-top: 2%;
+    }
+
+    .item{
+      border: 0;
+     //float:left;
+    }
+    //p{
+    //  float:right;
+    //}
+  }
+
+}

@@ -1,0 +1,19 @@
+ion-view.registerPage {
+
+  .back-button {
+    color: #fff;
+    .ion-chevron-left {
+      margin: 0 10px 0 0;
+    }
+  }
+
+  .register-form {
+    .item {
+      margin: 10% 0;
+      input {
+        margin-left: 10px;
+      }
+    }
+
+  }
+}

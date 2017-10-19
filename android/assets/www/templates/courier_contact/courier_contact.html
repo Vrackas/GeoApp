@@ -1,0 +1,24 @@
+﻿<ion-view class="courier_contact">
+
+  <div class="bar bar-header bar-balanced">
+    <button class="button button-icon icon" ui-sref="couriers_list"><i class="icon ion-arrow-left-a"></i></button>
+    <div class="h1 title">{{courier.name}}</div>
+    <a class="button button-balanced" href="tel:{{courier.phone}}">
+      
+      <i class="icon ion-android-call"></i>
+    </a>
+  </div>
+
+  <ion-content class="has-header">
+    <textarea class="messagearea" placeholder=" type your message" ng-model="message" ></textarea>
+    <ion-checkbox ng-model="model.sendMoney">Send money?</ion-checkbox>
+    <label class="item item-input" ng-show="model.sendMoney">
+      <input type="number" ng-model="model.moneyToSend">
+    </label>
+    <button class="button button-block button-balanced" ng-click="send(message)">
+      Send
+    </button>
+    <br />
+  </ion-content>
+
+</ion-view>

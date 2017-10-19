@@ -1,0 +1,18 @@
+<ion-view view-title="Courier_list_add" class="courierListAddPage" hide-nav-bar="true">
+    <div>
+        <div class="bar bar-header bar-stable">
+            <button ng-click="$ionicGoBack()" class="back-button button-icon icon"><i class="icon ion-chevron-left"></i>
+            </button>
+            <h1 class="title">Add Courier</h1>
+        </div>
+    </div>
+    <ion-content>
+        <ion-list class="list">
+            <ion-item class="item item-button-right" ng-repeat="couriers in vm.allList">
+                <h2>{{couriers.username}}</h2>
+                <button class="button button-icon icon" ng-click='vm.addCourier(couriers.id)'><i class="icon ion-plus"></i></button>
+            </ion-item>
+            <!--vm.addCourier(couriers.id)-->
+        </ion-list>
+    </ion-content>
+</ion-view>

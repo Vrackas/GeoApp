@@ -1,0 +1,46 @@
+<ion-view view-title="Profile" class="profilePage" hide-nav-bar="true">
+    <div>
+        <div class="bar bar-header bar-calm">
+            <button ng-click="$ionicGoBack()" class="back-button button-icon icon"><i class="icon ion-chevron-left"></i>
+            </button>
+            <h1 class="title">Profile</h1>
+        </div>
+    </div>
+    <ion-content>
+        <div>
+            <div class="username"><h1>{{vm.userInfo.user[0].username}}</h1></div>
+
+            <div class="list information-list">
+                <div class="item" ng-if="$root.role == 6">
+                    Your Status:
+                    <p>Worker</p>
+                </div>
+                <div class="item" ng-if="$root.role == 4">
+                    Your Status:
+                    <p>Courier</p>
+                </div>
+                <div class="item">
+                    Number Phone:
+                    <p>{{vm.userInfo.user[0].phone}}</p>
+                </div>
+                <div class="item">
+                    Card Number:
+                    <p>{{vm.userInfo.user[0].card}}</p>
+                </div>
+                <div class="item">
+                    Your email:
+                    <p>{{vm.userInfo.user[0].email}}</p>
+                </div>
+                <div class="item">
+                    Your Position:
+                    <p>{{"lat:" + vm.userInfo.user[0].lat}},{{"lng:" + vm.userInfo.user[0].lng}}</p>
+                </div>
+
+            </div>
+
+        </div>
+    </ion-content>
+    <div class="bar bar-footer bar-calm">
+        <button class="button button-clear pull-right" ng-click="clearStorage()" ui-sref="login">Exit</button>
+    </div>
+</ion-view>

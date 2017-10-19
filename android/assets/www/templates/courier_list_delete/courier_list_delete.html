@@ -1,0 +1,18 @@
+<ion-view view-title="Courier_list_delete" class="courierListDeletePage" hide-nav-bar="true">
+    <div>
+        <div class="bar bar-header bar-stable">
+            <button ng-click="$ionicGoBack()" class="back-button button-icon icon"><i class="icon ion-chevron-left"></i>
+            </button>
+            <h1 class="title">Delete Courier</h1>
+        </div>
+    </div>
+    <ion-content>
+        <ion-list class="list">
+            <ion-item class="item item-button-right" ng-repeat="couriers in vm.deleteList">
+                <h2>{{couriers.username}}</h2>
+                <button class="button button-icon icon" ng-click='vm.deleteCourier(couriers.id)'><i class="icon ion-minus"></i></button>
+            </ion-item>
+            <!--vm.addCourier(couriers.id)-->
+        </ion-list>
+    </ion-content>
+</ion-view>

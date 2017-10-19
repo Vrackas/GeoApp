@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+
+  <link rel="manifest" href="manifest.json">
+
+  <!--angular-->
+  <link rel="stylesheet" href="lib/angular-material/angular-material.css">
+
+
+  <!-- un-comment this code to enable service worker
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.log('Error', err));
+    }
+  </script>-->
+
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/ionic.app.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="lib/angular-toastr/dist/angular-toastr.css" />
+
+
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+  <link href="css/ionic.app.css" rel="stylesheet">
+  -->
+
+
+</head>
+<body ng-app="app" class="platform-android platform-cordova platform-webview">
+
+<ion-nav-view></ion-nav-view>
+
+
+</body>
+
+<!--<script src="lib/bluebird.min.js"></script>-->
+
+<!-- ionic/angularjs js -->
+<script src="lib/ionic/js/ionic.bundle.js"></script>
+<!--<script src="lib/ionic.cloud.min.js"></script>-->
+<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+<!-- ionic/angularjs js -->
+<script src="lib/angular-material/angular-material.js"></script>
+<script src="lib/angular-ui-mask/dist/mask.js"></script>
+<script src="lib/angular-aria/angular-aria.min.js"></script>
+<script src="lib/ngstorage/ngStorage.js"></script>
+<script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+<script src="lib/ionic-close-popup/ionic-close-popup.js"></script>
+<script src="lib/ngGeolocation/ngGeolocation.min.js"></script>
+<script src="http://maps.google.com/maps/api/js"></script>
+<script src="lib/ngmap/build/scripts/ng-map.min.js"></script>
+<script src="lib/moment/moment.js"></script>
+<script src="lib/moment/locale/de.js"></script>
+<script src="lib/angular-moment/angular-moment.js"></script>
+<script src="lib/angular-toastr/dist/angular-toastr.tpls.js"></script>
+
+
+
+
+
+<!-- cordova script (this will be a 404 during development) -->
+
+<script src="cordova.js"></script>
+
+<!--services-->
+<script src="services/services.connect.js"></script>
+
+<!-- your app's js -->
+<script src="app.js"></script>
+<script src="core/core.module.js"></script>
+<script src="core/config.js"></script>
+
+<script src="core/request.js"></script>
+<script src="core/url.js"></script>
+<script src="core/blocks/directives/directives.module.js"></script>
+
+<script src="core/blocks/factories/map.factory.js"></script>
+<script src="core/blocks/factories/chat.factory.js"></script>
+<script src="core/blocks/request/request.module.js"></script>
+<script src="core/blocks/services/services.module.js"></script>
+<script src="core/blocks/services/geo.services.js"></script>
+<script src="core/blocks/services/chat.services.js"></script>
+<script src="core/blocks/services/chat_firebase.services.js"></script>
+<script src="core/blocks/filters/filters.module.js"></script>
+<script src="core/blocks/factories/factories.module.js"></script>
+
+<!-- controllers -->
+<script src="templates/login/login.controller.js"></script>
+<script src="templates/register/register.controller.js"></script>
+<!--<script src="templates/password_recovery/password_recovery.js"></script>-->
+<script src="templates/couriers_list/couriers_list.controller.js"></script>
+<script src="templates/workers_list/workers_list.controller.js"></script>
+<script src="templates/courier_list_add/courier_list_add.controller.js"></script>
+<script src="templates/courier_list_delete/courier_list_delete.controller.js"></script>
+<script src="templates/courier_contact/courier_contact.controller.js"></script>
+<script src="templates/menu_operator/menu_operator.controller.js"></script>
+<script src="templates/chat_user/chat_user.controller.js"></script>
+<script src="templates/menu_courier/menu_courier.controller.js"></script>
+<script src="templates/geolocation/geolocation.controller.js"></script>
+<script src="templates/geolocation/geo.controller.js"></script>
+<script src="templates/profile/profile.controller.js"></script>
+<script src="templates/profile_for_list/profile_for_list.controller.js"></script>
+<script src="templates/notifications/notifications.controller.js"></script>
+<!--<script src="templates/geolocation/ngGeolocation.js"></script>-->
+
+
+</body>
+</html>
